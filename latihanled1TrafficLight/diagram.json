@@ -1,0 +1,38 @@
+{
+  "version": 1,
+  "author": "Atika Fitria Arifiana",
+  "editor": "wokwi",
+  "parts": [
+    { "type": "board-esp32-devkit-c-v4", "id": "esp", "top": 0, "left": -4.76, "attrs": {} },
+    {
+      "type": "wokwi-led",
+      "id": "ledMerah",
+      "top": 10,
+      "left": -180,
+      "attrs": { "color": "red" }
+    },
+    {
+      "type": "wokwi-led",
+      "id": "ledKuning",
+      "top": 40,
+      "left": -140,
+      "attrs": { "color": "yellow" }
+    },
+    {
+      "type": "wokwi-led",
+      "id": "ledHijau",
+      "top": 44.4,
+      "left": -101.8,
+      "attrs": { "color": "green" }
+    }
+  ],
+  "connections": [
+    [ "ledMerah:C", "esp:GND.1", "green", [ "v0" ] ],
+    [ "ledKuning:C", "esp:GND.1", "green", [ "v0" ] ],
+    [ "ledHijau:C", "esp:GND.1", "green", [ "v0" ] ],
+    [ "ledMerah:A", "esp:27", "green", [ "v0" ] ],
+    [ "ledHijau:A", "esp:26", "green", [ "v0" ] ],
+    [ "ledKuning:A", "esp:33", "green", [ "v14", "h115" ] ]
+  ],
+  "dependencies": {}
+}
